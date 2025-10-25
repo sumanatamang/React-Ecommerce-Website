@@ -1,6 +1,6 @@
 .shopcategory-banner {
     display: block;
-    margin: 8px auto;
+    margin: 30px auto;
     width: 82%;
 }
 
@@ -15,7 +15,6 @@
     padding: 10px 20px;
     border-radius: 40px;
     border: 1px solid #161010;
-
 }
 
 .shopcategory-indexSort p span {
@@ -23,19 +22,19 @@
 }
 
 .shopcategory-products {
-    margin: 20px 170px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 50px;
     row-gap: 80px;
-    margin-left: 70px;
+    width: 90%;
+    margin: 50px auto 0;
 }
 
 .shopcategory-loadmore {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 80px;
-    margin-left: 600px;
+    margin: 150px auto;
     width: 240px;
     height: 72px;
     border-radius: 75px;
@@ -43,7 +42,6 @@
     color: rgb(230, 233, 241);
     font-size: 18px;
     font-weight: 500;
-
 }
 
 @media(max-width:800px) {

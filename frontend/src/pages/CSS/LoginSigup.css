@@ -1,24 +1,21 @@
 .loginsignup {
     width: 100%;
-    height: 80vh;
     background: rgb(235, 237, 234);
-    padding-top: 20px;
-
-
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .loginsignup-container {
-    width: 300px;
-    height: 500px;
+    width: 580px;
+    height: 600px;
     background: white;
     margin: auto;
-    padding: 0px 20px;
+    padding: 40px 60px;
     color: #454b45;
 }
 
 .loginsignup-container h1 {
-    margin: 10px 0px;
-
+    margin: 20px 0px;
 }
 
 .loginsignup-fields {
@@ -40,7 +37,7 @@
 }
 
 .loginsignup-container button {
-    width: 290px;
+    width: 250px;
     height: 50px;
     border-radius: 40px;
     color: aliceblue;
@@ -50,7 +47,6 @@
     font-size: 25px;
     font-weight: 500;
     cursor: pointer;
-
 }
 
 .loginsignup-login {
@@ -58,7 +54,6 @@
     color: #454b45;
     font-size: 14px;
     font-weight: 500;
-
 }
 
 .loginsignup-login span {
@@ -70,7 +65,7 @@
     display: flex;
     align-items: center;
     margin-top: 20px;
-    gap: 8px;
+    gap: 20px;
     color: #454b45;
     font-size: 14px;
     font-weight: 400;

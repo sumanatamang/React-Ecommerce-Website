@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 90vh;
-    padding-left: 7px;
+    margin: 60px 0 40px;
+    padding: 0;
 }
 
 .gurungcollection h1 {
@@ -16,21 +16,26 @@
 }
 
 .gurungcollection hr {
-    width: 80px;
+    width: 120px;
     height: 6px;
     border-radius: 5px;
     background: #9e8686;
 }
 
 .gmcollections {
-    display: flex;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    margin-top: 2px;
-    gap: 2px;
-
+    margin-top: 50px;
+    gap: 30px;
+    width: 90%;
+    margin: 50px auto 0;
 }
 
 @media(max-width:1288px) {
+    .gmcollections {
+        padding-top: 10px;
+    }
+
     .gurungcollection h1 {
         font-size: 40px;
     }
@@ -47,6 +52,9 @@
 }
 
 @media(max-width:1024px) {
+    .gmcollections {
+        padding-top: 10px;
+    }
 
     .gurungcollection h1 {
         font-size: 30px;
