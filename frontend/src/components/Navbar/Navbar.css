@@ -1,0 +1,220 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: rgba(45, 119, 11, 0.221);
+    box-shadow: 0 1px 3px -2px rgb(104, 218, 104);
+}
+
+.nav-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.nav-logo p {
+    color: rgb(19, 69, 35);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-menu {
+    /*aliging navbar menu*/
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 50px;
+    color: rgb(2, 70, 24);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.nav-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+
+}
+
+.nav-menu h {
+    /*h tag is used for hovering straight line below nav option*/
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background: rgba(25, 34, 20, 0.845);
+}
+
+.nav-login-cart {
+    /*style for login and cart icon*/
+    display: flex;
+    align-items: center;
+    gap: 45px;
+    /*space between cart and login button */
+}
+
+.nav-login-cart button {
+    /* styling button */
+    width: 120px;
+    height: 58px;
+    outline: none;
+    border-radius: 75px;
+    color: rgb(14, 50, 38);
+    font-size: 20px;
+    font-weight: 500;
+    background: white;
+    cursor: pointer;
+
+}
+
+.nav-login-cart button:active {
+    /*styling button when clicked on it it change color*/
+    background: rgb(56, 122, 61);
+}
+
+.nav-cart-count {
+    /*styling cart icon and added iteam dispaly*/
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -55px;
+    border-radius: 11px;
+    font-size: 14px;
+    background-color: rgb(232, 140, 75);
+    color: rgb(255, 253, 251);
+
+}
+
+.nav-dropdown {
+    display: none;
+}
+
+/* media queries for responsiveness*/
+@media(max-width:1280px) {
+    .navbar {
+        padding: 5px 30px;
+    }
+
+    .nav-logo img {
+        width: 40px;
+
+    }
+
+    .nav-logo p {
+        font-size: 25px;
+    }
+
+    .nav-menu {
+        gap: 40px;
+        font-size: 16px;
+    }
+
+    .nav-login-cart {
+        gap: 20px;
+
+    }
+
+    .nav-login-cart button {
+        width: 110px;
+        height: 45px;
+        font-size: 16px;
+
+    }
+
+    .nav-cart-count {
+        margin-left: -40px;
+        font-size: 12px;
+    }
+}
+
+@media(max-width:1024px) {
+    .navbar {
+        padding: 12px 30px;
+
+    }
+
+    .nav-menu {
+        gap: 25px;
+        font-size: 14px;
+
+    }
+
+    .nav-login-cart button {
+        width: 80px;
+        height: 35px;
+        font-size: 14px;
+    }
+
+    .nav-login-cart img {
+        width: 30px;
+
+    }
+
+    .nav-cart-count {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media(max-width:800px) {
+    .navbar {
+        padding: 10px 0px;
+
+    }
+
+    .nav-dropdown {
+        display: block;
+        width: 50px;
+        height: 6vh;
+        rotate: -90deg;
+        transition: 0.5s;
+    }
+
+    .nav-menu {
+        display: none;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        background-color: rgba(45, 119, 11, 0.221);
+        justify-content: center;
+        top: 100px;
+    }
+
+    .nav-menu-visible {
+        display: flex;
+    }
+
+    .nav-dropdown.open {
+        transform: rotate(90deg);
+    }
+}
+
+@media(max-width:500px) {
+    .navbar {
+        width: 8px 0px;
+        gap: 10px;
+
+    }
+
+    .nav-logo {
+        transform: scale(0.8);
+    }
+
+    .nav-menu {
+        height: 60px;
+        top: 120px;
+    }
+
+    .nav-login-cart {
+        transform: scale(0.8);
+    }
+
+}
