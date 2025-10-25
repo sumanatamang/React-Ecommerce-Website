@@ -1,4 +1,4 @@
-const port = 4000;
+const port = 5000;
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -6,16 +6,22 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
-const { type } = require("os");
-const { log } = require("console");
+const fs = require("fs");
 
 app.use(express.json());
 app.use(cors());
 
+const uploadDir = "./upload/images";
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+  console.log("Created upload folder at:", uploadDir);
+}
+
 //database connection with MongoDB
-mongoose.connect(
-  "mongodb+srv://sumanatamang:m@ng00s3DxB@cluster0.rusbsvr.mongodb.net/ecommerce"
-);
+mongoose
+  .connect("mongodb+srv://sumana_db:MGecomdb8fp@cluster0.bow66ye.mongodb.net/")
+  .then(() => console.log("MongoDB Connected"))
+  .catch((err) => console.log("MongoDB Connection Error:", err));
 
 //API creation
 
@@ -35,12 +41,12 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage: storage });
 
-//Creating Upload Endpoint for Images
+//Image Upload Endpoint
 app.use("/images", express.static("upload/images"));
-app.post("/images", upload.single("product"), (req, res) => {
+app.post("/upload", upload.single("product"), (req, res) => {
   res.json({
     success: 1,
-    imagge_url: "http://localhost:${port}/images/${req.file.filename}",
+    image_url: "http://localhost:${port}/images/${req.file.filename}",
   });
 });
 
@@ -98,9 +104,11 @@ app.post("/addproduct", async (req, res) => {
     new_price: req.body.new_price,
     old_price: req.body.old_price,
   });
+
   console.log(product);
   await product.save();
   console.log("Saved");
+
   res.json({
     success: true,
     name: req.body.name,
@@ -113,7 +121,6 @@ app.post("/removeproduct", async (req, res) => {
   console.log("Removed");
   res.json({
     success: true,
-    name: req.body.name,
   });
 });
 

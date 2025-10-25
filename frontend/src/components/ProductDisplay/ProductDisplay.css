@@ -1,7 +1,6 @@
 .productdisplay {
     display: flex;
     margin: 0px 180px;
-
 }
 
 .productdisplay-left {
@@ -59,16 +58,13 @@
 
 .productdisplay-right-prices-new {
     color: rgb(36, 23, 23);
-
 }
-
 
 .productdisplay-right-size h1 {
     margin-top: 20px;
     color: #2c2222;
     font-size: 20px;
     font-weight: 600px;
-
 }
 
 .productdisplay-right-sizes {
@@ -268,7 +264,6 @@
         padding: 10px 16px;
         font-size: 14px;
     }
-
 
     .productdisplay-right button {
         width: 130px;
